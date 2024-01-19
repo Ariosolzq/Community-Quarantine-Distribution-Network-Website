@@ -1,0 +1,141 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="zh-cn">
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>商品选购</title>
+<!--引入信息检验文件-->
+<script src="spxg.js" language="javascript"></script>
+<!--引入样式文件-->
+<link rel="stylesheet" href="../ddjbxx.css" type="text/css">
+
+</head>
+
+<body>
+<form name="form1" onsubmit="return checkform()" method="POST" action="spxg.jsp">
+	<div align="center">
+		<table border="1" width="69%" cellspacing="1" cellpadding="3" height="484" bordercolor="#000000" id="table">
+			<tr>
+				<td colspan="2" bgcolor="#E6F7FF">
+				<font face="华文细黑">
+				<a href="javascript:history.back()"><font size="4">主页</font></a><font size="4">->商品选购
+			 
+				</font></font>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<p align="center" id="s1"><font face="微软雅黑">请选择您想要购买的商品</font></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<p align="center"><font id="s3"> </font><font size="2">（带**号为必填项目）</font></font></td>
+			</tr>
+			<tr>
+				<td width="36%" id="s2">
+				<p style="text-align: center"><font face="微软雅黑">商品</font></td>
+				<td width="61%">
+				<p align="left"><font face="微软雅黑">商品详情及选购</font></td>
+			</tr>
+			<tr>
+				<td width="36%" id="s2">
+				<p style="text-align: center"><font face="微软雅黑">防疫物资包</font></p>
+				<p style="text-align: center">
+				<font face="微软雅黑">
+				<img border="0" src="image/fywpb.gif" width="189" height="133"></font></td>
+				<td width="61%"><font face="微软雅黑">单价：10元/份</font><p>
+				<font face="微软雅黑">订购份数：<select name="fywzb" id="fywzb" onblur="calculateTotal()">
+							<option value="0" selected>0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							</select></font></p>
+							<p><font face="微软雅黑">包含口罩、消毒液、洗手液等防疫物资，保障您的健康安全。</font></td>
+			</tr>
+			<tr>
+				<td width="36%" id="s2">
+				<p style="text-align: center"><font face="微软雅黑">家庭生活用品</font></p>
+				<p style="text-align: center">
+				<font face="微软雅黑">
+				<img border="0" src="image/jtshyp.gif" width="191" height="140"></font></td>
+				<td width="61%"><font face="微软雅黑">单价：10元/份</font><p>
+				<font face="微软雅黑">订购份数：<select name="jtshyp" id ="jtshyp" onblur ="calculateTotal()">
+							<option value ="0" selected>0</option >
+							<option value ="1">1</option >
+							<option value ="2">2</option >
+							<option value ="3">3</option >
+							<option value ="4">4</option >
+							<option value ="5">5</option >
+							</select></font></p >
+							<p><font face="微软雅黑">包含各类家庭生活必需品，如洗衣液、洗洁精、纸巾等。</font></td >
+			</tr >
+			<tr >
+				<td width ="36%" id ="s2">
+				<p style="text-align: center"><font face="微软雅黑">新鲜食材</font></p>
+				<p style ="text-align: center">
+					<font face="微软雅黑">
+					<img border ="0" src ="image/xxsc.gif" width ="189" height ="137"></font></td >
+				<td width ="61%"><font face="微软雅黑">单价：10元/份</font><p>
+					<font face="微软雅黑">订购份数：<select name ="xxsc" id ="xxsc" onblur ="calculateTotal()">
+					<option value ="0" selected>0</option >
+					<option value ="1">1</option >
+					<option value ="2">2</option >
+					<option value ="3">3</option >
+					<option value ="4">4</option >
+					<option value ="5">5</option >
+					</select></font></p >
+					<p><font face="微软雅黑">当季新鲜食材，包含各类水果、蔬菜和肉类，供应季节性食材。</font></td >
+			</tr >
+			<tr >
+				<td width ="36%" id ="s2">
+				<p style="text-align: center"><font face="微软雅黑">客户姓名</font></td >
+				<td width ="61%"><font face="微软雅黑"><input type ="text" name ="kehuxingming" size ="20"></font><font id ="s3" face="微软雅黑">**不多于4个汉字</font></td >
+			</tr >
+			<tr >
+				<td width ="36%" id ="s2">
+				<p style="text-align: center"><font face="微软雅黑">客户电话</font></td >
+				<td width ="61%"><font face="微软雅黑"><input type ="text" name ="kehudianhua" size ="20"></font><font id ="s3" face="微软雅黑">**必须是11位数字</font></td >
+			</tr >
+			<tr >
+				<td width ="36%" id ="s2">
+				<p style="text-align: center"><font face="微软雅黑">详细地址</font></td >
+				<td width ="61%">
+					<font face="微软雅黑">
+					<select size="1" name="louyu">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>栋
+					<select size="1" name="xiangxidizhi">
+						<option value="101">101</option>
+						<option value="201">201</option>
+						<option value="301">301</option>
+						<option value="401">401</option>
+						<option value="501">501</option>
+					</select>室
+					</font>
+					<font id ="s3" face="微软雅黑">请按照真实情况填写</font><font face="微软雅黑">
+					</font>
+				</td>
+			</tr>
+			<tr>
+				<td width="36%" id="s2">
+				<p style="text-align: center"><font face="微软雅黑">备注</font></td>
+				<td width="61%"><font face="微软雅黑"><textarea rows="8" name="beizhu" cols="35"></textarea></font><font id="s3" face="微软雅黑">不多于20个汉字</font></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+				<p align="center"><font face="微软雅黑"><input type="submit" value="下单" name="B1">&nbsp;
+				<input type="reset" value="重置" name="B2"></font></td>
+			</tr>
+		</table>
+	</div>
+	<p>　</p>
+</form>
+
+</body>
+
+</html>
+
